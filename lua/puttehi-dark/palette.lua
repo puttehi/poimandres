@@ -1,12 +1,12 @@
 --- palette variants
 local variants = {
   main = { -- main palette
-    yellow = '#E1B800', -- copy+visual modes, warn, buffertarget etc.
+    yellow = '#FCE94F', -- copy+visual modes, warn, buffertarget etc.
     teal1 = '#729FCF', -- normal mode, types, html h1h2, ts keywords,
     teal2 = '#CC0000', -- git_text, ```, return, cssClass, ...
     teal3 = '#42675A', -- git_rename
     blue1 = '#89DDFF', -- insert mode, git_stage, hint, md h5+link, border, spellcap+rare
-    blue2 = '#FCE94F', -- git change, md h1-h4, funct, incsearch
+    blue2 = '#E1B800', -- git change, md h1-h4, funct, incsearch
     blue3 = '#69ABBC', -- link, punct, info, more, status, tab, keyword, exc, cssClass, ..
     blue4 = '#3465A4', -- git_dirty, nontext, ts-enum
     pink1 = '#FAE4FC', -- not used
