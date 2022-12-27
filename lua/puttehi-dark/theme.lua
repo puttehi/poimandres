@@ -135,7 +135,7 @@ function M.get(config)
     -- Ignore = { }, -- (preferred) left blank, hidden  |hl-Ignore|
 
     Error = { fg = p.pink3 }, -- (preferred) any erroneous construct
-    Todo = { bg = p.yellow, fg = p.background3 }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+    Todo = { fg = p.white, style = 'bold' }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
     qfLineNr = { fg = p.blueGray3 },
     qfFileName = { fg = p.blueGray2 },
@@ -284,13 +284,13 @@ function M.get(config)
     LspCodeLensSeparator = { fg = p.blueGray3 }, -- separator between two or more code lens
 
     -- nvim-ts-rainbow
-    rainbowcol1 = { fg = p.blue1 },
-    rainbowcol2 = { fg = p.teal1 },
-    rainbowcol3 = { fg = p.yellow },
-    rainbowcol4 = { fg = p.blue2 },
-    rainbowcol5 = { fg = p.teal2 },
-    rainbowcol6 = { fg = p.pink3 },
-    rainbowcol7 = { fg = p.blue3 },
+    rainbowcol1 = { fg = p.teal2 },
+    rainbowcol2 = { fg = p.pink2 },
+    rainbowcol3 = { fg = p.teal3 },
+    rainbowcol4 = { fg = p.blue4 },
+    rainbowcol5 = { fg = p.pink3 },
+    rainbowcol6 = { fg = p.blue3 },
+    rainbowcol7 = { fg = p.pink1 },
 
     -- romgrk/barbar.nvim
     BufferCurrent = { fg = p.text, bg = p.background2 },
@@ -370,7 +370,7 @@ function M.get(config)
     CmpItemAbbrMatch = { fg = p.text, style = 'bold' },
     CmpItemAbbrMatchFuzzy = { fg = p.teal1, style = 'bold' },
     CmpItemKind = { fg = p.blue3 },
-    CmpItemKindClass = { fg = p.yellow },
+    CmpItemKindClass = { fg = p.blue3 },
     CmpItemKindFunction = { fg = p.blue1 },
     CmpItemKindInterface = { fg = p.blue2 },
     CmpItemKindMethod = { fg = p.pink3 },
