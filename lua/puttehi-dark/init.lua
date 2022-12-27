@@ -1,5 +1,5 @@
 --[[ require 'poimandres.highlights' ]]
-local utils = require 'poimandres.utils'
+local utils = require 'puttehi-dark.utils'
 
 local M = {}
 
@@ -71,9 +71,9 @@ function M.colorscheme()
   end
 
   vim.opt.termguicolors = true
-  vim.g.colors_name = 'poimandres'
+  vim.g.colors_name = 'puttehi-dark'
 
-  local theme = require('poimandres.theme').get(config)
+  local theme = require('puttehi-dark.theme').get(config)
 
   -- Set theme highlights
   for group, color in pairs(theme) do
