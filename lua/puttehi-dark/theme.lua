@@ -93,17 +93,17 @@ function M.get(config)
     String = { fg = p.teal1 }, --   a string constant: "this is a string"
     Character = { fg = p.pink3 }, --  a character constant: 'c', '\n'
     Number = { fg = p.teal1 }, --   a number constant: 234, 0xff
-    Boolean = { fg = p.teal1 }, --  a boolean constant: TRUE, false
+    Boolean = { fg = p.blue2 }, --  a boolean constant: TRUE, false
     Float = { fg = p.teal1 }, --    a floating point constant: 2.3e10
 
-    Identifier = { fg = p.blueGray1 }, -- (preferred) any variable name
-    Function = { fg = p.blue2 }, -- function name (also: methods for classes)
+    Identifier = { fg = p.text }, -- (preferred) any variable name
+    Function = { fg = p.teal1 }, -- function name (also: methods for classes)
 
     Statement = { fg = p.text }, -- (preferred) any statement
     Conditional = { fg = p.blueGray1 }, --  if, then, else, endif, switch, etc.
     Repeat = { fg = p.blue3 }, --   for, do, while, etc.
     Label = { fg = p.text }, --    case, default, etc.
-    Operator = { fg = p.blue2 }, -- "sizeof", "+", "*", etc.
+    Operator = { fg = p.blue3 }, -- "sizeof", "+", "*", etc.
     Keyword = { fg = p.blue3 }, --  any other keyword
     Exception = { fg = p.blue3 }, --  try, catch, throw
 
@@ -370,7 +370,7 @@ function M.get(config)
     CmpItemAbbrMatch = { fg = p.text, style = 'bold' },
     CmpItemAbbrMatchFuzzy = { fg = p.teal1, style = 'bold' },
     CmpItemKind = { fg = p.blue3 },
-    CmpItemKindClass = { fg = p.blue3 },
+    CmpItemKindClass = { fg = p.yellow },
     CmpItemKindFunction = { fg = p.blue1 },
     CmpItemKindInterface = { fg = p.blue2 },
     CmpItemKindMethod = { fg = p.pink3 },
