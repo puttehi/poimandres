@@ -61,7 +61,7 @@ function M.get(config)
     RedrawDebugClear = { fg = '#ffffff', bg = p.yellow },
     RedrawDebugComposed = { fg = '#ffffff', bg = p.teal2 },
     RedrawDebugRecompose = { fg = '#ffffff', bg = p.pink3 },
-    Search = { fg = p.white, bg = p.blueGray3 },
+    Search = { fg = p.white },
     SpecialKey = { fg = p.teal1 },
     SpellBad = { sp = p.pink3, style = 'undercurl' },
     SpellCap = { sp = p.blue1, style = 'undercurl' },
@@ -100,20 +100,20 @@ function M.get(config)
     Function = { fg = p.teal1 }, -- function name (also: methods for classes)
 
     Statement = { fg = p.text }, -- (preferred) any statement
-    Conditional = { fg = p.blueGray1 }, --  if, then, else, endif, switch, etc.
-    Repeat = { fg = p.blue3 }, --   for, do, while, etc.
-    Label = { fg = p.text }, --    case, default, etc.
+    Conditional = { fg = p.teal2 }, --  if, then, else, endif, switch, etc.
+    Repeat = { fg = p.teal2 }, --   for, do, while, etc.
+    Label = { fg = p.teal2 }, --    case, default, etc.
     Operator = { fg = p.blue3 }, -- "sizeof", "+", "*", etc.
     Keyword = { fg = p.blue3 }, --  any other keyword
-    Exception = { fg = p.blue3 }, --  try, catch, throw
+    Exception = { fg = p.teal2 }, --  try, catch, throw
 
     PreProc = { fg = p.text }, -- (preferred) generic Preprocessor
-    Include = { fg = p.blueGray1 }, --  preprocessor #include
+    Include = { fg = p.teal2 }, --  preprocessor #include
     -- Define        = { }, --   preprocessor #define
     -- Macro         = { }, --    same as Define
     -- PreCondit     = { }, --  preprocessor #if, #else, #endif, etc.
 
-    Type = { fg = p.blueGray1 }, -- (preferred) int, long, char, etc.
+    Type = { fg = p.blue2 }, -- (preferred) int, long, char, etc.
     --[[ Structure = { fg = p.blueGray1 }, --  struct, union, enum, etc. ]]
     -- StorageClass  = { }, -- static, register, volatile, etc.
     -- Typedef = { fg = p.blueGray1 }, --  A typedef
