@@ -104,7 +104,7 @@ function M.get(config)
     Repeat = { fg = p.brightRed1 }, --   for, do, while, etc.
     Label = { fg = p.brightRed1 }, --    case, default, etc.
     Operator = { fg = p.darkCyan1 }, -- "sizeof", "+", "*", etc.
-    Keyword = { fg = p.darkCyan1 }, --  any other keyword
+    Keyword = { fg = p.brightRed1 }, --  any other keyword
     Exception = { fg = p.brightRed1 }, --  try, catch, throw
 
     PreProc = { fg = p.text }, -- (preferred) generic Preprocessor
