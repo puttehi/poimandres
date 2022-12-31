@@ -16,7 +16,11 @@ end
 
 local function parse_color(color)
   if color == nil then
-    return print 'invalid color'
+    return print 'invalid color, was nil'
+  end
+  color_type = type(color)
+  if color_type != "string" then
+    return print(string.format('invalid color, was type of %s: %s', color_type, color))
   end
 
   color = color:lower()
