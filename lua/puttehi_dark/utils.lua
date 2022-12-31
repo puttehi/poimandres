@@ -14,13 +14,21 @@ local function rgb(color)
   return { byte(color, 16), byte(color, 8), byte(color, 0) }
 end
 
-local function parse_color(color)
-  if color == nil then
-    return print 'invalid color, was nil'
+local function print_to_vim(...)
+  local objects = {}
+  for i = 1, select('#', ...) do
+    local v = select(i, ...)
+    table.insert(objects, vim.inspect(v))
   end
+
+  print(table.concat(objects, '\n'))
+  return ...
+end
+
+local function parse_color(color)
   color_type = type(color)
   if color_type ~= "string" then
-    return print(string.format('invalid color, was type of %s: %s', color_type, color))
+    return print_to_vim({'invalid color', color_type, color})
   end
 
   color = color:lower()
