@@ -19,7 +19,7 @@ local function parse_color(color)
     return print 'invalid color, was nil'
   end
   color_type = type(color)
-  if color_type != "string" then
+  if color_type ~= "string" then
     return print(string.format('invalid color, was type of %s: %s', color_type, color))
   end
 
