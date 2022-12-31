@@ -1,9 +1,9 @@
-local blend = require('puttehi-dark.utils').blend
+local blend = require('puttehi_dark.utils').blend
 
 local M = {}
 
 function M.get(config)
-  local p = require 'puttehi-dark.palette'
+  local p = require 'puttehi_dark.palette'
 
   local theme = {}
   local groups = config.groups or {}
