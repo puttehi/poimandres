@@ -4,8 +4,17 @@ local function byte(value, offset)
   return bit.band(bit.rshift(value, offset), 0xFF)
 end
 
+-- color is: #RRGGBB or nvim_get_color_by_name byte value
+
 local function rgb(color)
-  color = vim.api.nvim_get_color_by_name(color)
+
+  color_type = type(color)
+  -- #RRGGBB
+  if color_type == "string" then
+      -- assuming it's correctly formatted already
+      color = vim.api.nvim_get_color_by_name(color)
+  end
+  -- byte value (number) - do nothing, already what we are looking for
 
   if color == -1 then
     color = vim.opt.background:get() == 'dark' and 000 or 255255255
