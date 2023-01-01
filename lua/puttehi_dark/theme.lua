@@ -43,7 +43,7 @@ function M.get(config)
     Folded = { fg = p.text, bg = groups.panel },
     IncSearch = { fg = p.lightPink1 },
     LineNr = { fg = p.lightSilver1 },
-    MatchParen = { fg = p.white, style = 'bold' },
+    MatchParen = { fg = p.white, style = 'bold' }, -- match for parenthesis under cursor / code block
     ModeMsg = { fg = p.darkCyan1 },
     MoreMsg = { fg = p.darkCyan1 },
     NonText = { fg = p.darkBlue1 },
