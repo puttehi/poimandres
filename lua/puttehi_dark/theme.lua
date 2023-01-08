@@ -7,14 +7,6 @@ function M.get(config)
 
   local theme = {}
   local groups = config.groups or {}
-  local styles = {
-    italic = (config.disable_italics and p.none) or 'italic',
-    vert_split = (config.bold_vert_split and groups.border) or p.none,
-    background = (config.disable_background and p.none) or groups.background,
-    float_background = (config.disable_float_background and p.none) or groups.background_float,
-  }
-  styles.nc_background = (config.dim_nc_background and not config.disable_background and groups.panel)
-    or styles.background
 
   theme = {
     ColorColumn = { bg = p.lightGray2 },
@@ -47,11 +39,11 @@ function M.get(config)
     ModeMsg = { fg = p.darkCyan1 },
     MoreMsg = { fg = p.darkCyan1 },
     NonText = { fg = p.darkBlue1 },
-    Normal = { fg = p.text, bg = styles.background },
-    NormalFloat = { fg = p.text, bg = styles.float_background },
-    NormalNC = { fg = p.text, bg = styles.nc_background },
+    Normal = { fg = p.text, bg = groups.background },
+    NormalFloat = { fg = p.text, bg = groups.background_float},
+    NormalNC = { fg = p.text, bg = groups.background },
     NvimInternalError = { fg = '#ffffff', bg = p.lightRed1 },
-    Pmenu = { fg = p.lightGray2, bg = styles.float_background },
+    Pmenu = { fg = p.lightGray2, bg = groups.background_float },
     PmenuSbar = { bg = p.lightSilver1 },
     PmenuSel = { fg = p.text, bg = p.background3 },
     PmenuThumb = { bg = p.lightGray3 },
@@ -68,15 +60,15 @@ function M.get(config)
     SpellLocal = { sp = p.lightYellow1, style = 'undercurl' },
     SpellRare = { sp = p.brightCyan1, style = 'undercurl' },
     SignColumn = { fg = p.text, bg = p.none },
-    StatusLine = { fg = p.darkCyan1, bg = styles.float_background },
-    StatusLineNC = { fg = p.darkCyan1, bg = styles.background },
+    StatusLine = { fg = p.darkCyan1, bg = groups.background_float},
+    StatusLineNC = { fg = p.darkCyan1, bg = groups.background },
     StatusLineTerm = { link = 'StatusLine' },
     StatusLineTermNC = { link = 'StatusLineNC' },
-    TabLine = { fg = p.darkCyan1, bg = styles.float_background },
-    TabLineFill = { bg = styles.float_background },
+    TabLine = { fg = p.darkCyan1, bg = groups.background_float },
+    TabLineFill = { bg = groups.background_float },
     TabLineSel = { fg = p.text, bg = p.background3 },
     Title = { fg = p.text },
-    VertSplit = { fg = groups.border, bg = styles.vert_split },
+    VertSplit = { fg = groups.border, bg = groups.border },
     Visual = { fg = p.text, bg = p.lightGray3 },
     -- VisualNOS = {},
     WarningMsg = { fg = p.lightYellow1 },
@@ -239,7 +231,7 @@ function M.get(config)
     -- TSSymbol = {},
     ['@tag'] = { fg = p.text },
     ['@tag.delimiter'] = { fg = p.text },
-    ['@tag.attribute'] = { fg = p.darkCyan1, style = styles.italic },
+    ['@tag.attribute'] = { fg = p.darkCyan1, style = "italic" },
     ['@text'] = { fg = p.text },
     ['@title'] = { fg = groups.headings.h1, style = 'bold' },
     ['@type'] = { link = 'Type' },
@@ -269,8 +261,8 @@ function M.get(config)
     cssTSProperty = { fg = p.darkYellow1 },
     cssTSType = { fg = p.lightBlue1 },
     cssTSKeyword = { fg = p.lightGray2 },
-    cssClassName = { fg = p.brightRed1, style = styles.italic },
-    cssPseudoClass = { fg = p.darkCyan1, style = styles.italic },
+    cssClassName = { fg = p.brightRed1, style = "italic" },
+    cssPseudoClass = { fg = p.darkCyan1, style = "italic" },
     cssDefinition = { fg = p.darkYellow1 },
     cssTSError = { link = 'cssClassName' },
 
