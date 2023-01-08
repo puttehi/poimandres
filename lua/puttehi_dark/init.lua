@@ -18,6 +18,8 @@ local config = {
     comment = 'lightGray3',
     link = 'darkCyan1',
     punctuation = 'darkCyan1',
+    text = 'text',
+    glowing = 'white',
 
     error = 'lightRed1',
     hint = 'brightCyan1',

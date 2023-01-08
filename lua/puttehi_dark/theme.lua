@@ -350,12 +350,13 @@ function M.get(config)
     NvimTreeWindowPicker = { fg = groups.bg, bg = p.lightGray2 },
 
     -- folke/which-key.nvim
-    WhichKey = { fg = p.text },
-    WhichKeyGroup = { fg = p.text },
-    WhichKeySeparator = { fg = p.text },
-    WhichKeyDesc = { fg = p.text },
-    WhichKeyFloat = { bg = groups.panel },
-    WhichKeyValue = { fg = p.text },
+    WhichKey = { fg = groups.glowing }, -- key
+    WhichKeyGroup = { fg = groups.glowing, style = "bold"}, -- key if its a group
+    WhichKeySeparator = { fg = groups.punctuation }, -- key-label separator
+    WhichKeyDesc = { fg = groups.comment }, -- key description
+    WhichKeyFloat = { bg = groups.panel }, -- floating panel
+    WhichKeyBorder = { fg = groups.border }, -- border
+    WhichKeyValue = { fg = groups.text }, -- value if some plugin provides it
 
     -- luka-reineke/indent-blankline.nvim
     IndentBlanklineChar = { fg = p.background3 },
