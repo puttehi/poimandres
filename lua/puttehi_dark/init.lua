@@ -13,9 +13,9 @@ local config = {
 
     groups = {
         background = 'background2',
-        background_float = 'background3',
-        panel = 'background3',
-        panel_float = 'background4',
+        background_float = 'background4',
+        panel = 'background1',
+        panel_float = 'background3',
         border = 'lightTeal1',
         comment = 'lightGray3',
         link = 'darkCyan1',
