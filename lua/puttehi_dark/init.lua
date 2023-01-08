@@ -12,10 +12,10 @@ local config = {
     dim_nc_background = false,
 
     groups = {
-        background = 'background1',
-        background_float = 'background2',
-        panel = 'background2',
-        panel_float = 'background3',
+        background = 'background2',
+        background_float = 'background3',
+        panel = 'background3',
+        panel_float = 'background4',
         border = 'lightTeal1',
         comment = 'lightGray3',
         link = 'darkCyan1',
