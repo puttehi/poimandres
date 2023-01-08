@@ -27,10 +27,10 @@ local config = {
 
         -- coding stuff
         const = 'lightSilver1',
-        const2 = 'white',
+        const2 = 'darkYellow1',
         str = 'lightBlue1',
         str2 = 'brightCyan1',
-        varname = 'text',
+        varname = 'brightRed1',
         vartype = 'brightRed1',
         func = 'brightRed1',
         operator = 'darkCyan1',
