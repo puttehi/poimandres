@@ -21,7 +21,7 @@ local config = {
         link = 'darkCyan1',
         punctuation = 'darkCyan1',
         text = 'text',
-        text_bright = "lightSilver1",
+        text_bright = 'lightSilver1',
         glowing = 'white',
         nontext = 'darkBlue1',
 
@@ -67,6 +67,7 @@ function M.setup(opts)
     opts = opts or {}
     -- vim.g.poimandres_variant = opts.dark_variant or 'main'
 
+    -- if headings were given as a single string, set all to same string
     if opts.groups and type(opts.groups.headings) == 'string' then
         opts.groups.headings = {
             h1 = opts.groups.headings,
