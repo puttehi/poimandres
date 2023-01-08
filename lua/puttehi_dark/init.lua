@@ -32,7 +32,7 @@ local config = {
         str2 = 'brightCyan1',
         varname = 'brightRed1',
         vartype = 'brightRed1',
-        func = 'brightRed1',
+        func = 'lightBlue1',
         operator = 'darkCyan1',
         ifelse = 'brightRed1',
 
