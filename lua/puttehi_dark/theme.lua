@@ -6,6 +6,12 @@ function M.get(config)
     local p = require 'puttehi_dark.palette'
 
     local groups = config.groups or {}
+    local h1 = groups.headings.h1 or "text"
+    local h2 = groups.headings.h2 or "text"
+    local h3 = groups.headings.h3 or "text"
+    local h4 = groups.headings.h4 or "text"
+    local h5 = groups.headings.h5 or "text"
+    local h6 = groups.headings.h6 or "text"
 
     local theme = {
         ColorColumn = { bg = groups.comment },
@@ -50,10 +56,10 @@ function M.get(config)
         -- QuickFixLine = {},
         -- RedrawDebugNormal = {}
         RedrawDebugClear = { fg = groups.glowing, bg = groups.warn },
-        RedrawDebugComposed = { fg = groups.glowing, bg = groups.headings.h1 },
+        RedrawDebugComposed = { fg = groups.glowing, bg = h1 },
         RedrawDebugRecompose = { fg = groups.glowing, bg = groups.error },
         Search = { fg = groups.glowing },
-        SpecialKey = { fg = groups.headings.h5 },
+        SpecialKey = { fg = h5 },
         SpellBad = { sp = groups.error, style = 'undercurl' },
         SpellCap = { sp = groups.hint, style = 'undercurl' },
         SpellLocal = { sp = groups.warn, style = 'undercurl' },
@@ -131,23 +137,23 @@ function M.get(config)
         qfLineNr = { fg = groups.comment },
         qfFileName = { fg = groups.text_bright },
 
-        htmlH1 = { fg = groups.headings.h1, style = 'bold' },
-        htmlH2 = { fg = groups.headings.h2, style = 'bold' },
+        htmlH1 = { fg = h1, style = 'bold' },
+        htmlH2 = { fg = h2, style = 'bold' },
 
         -- mkdHeading = { fg = c.orange, style = "bold" },
         -- mkdCode = { bg = c.terminal_black, fg = c.fg },
         mkdCodeDelimiter = { bg = groups.background, fg = groups.text },
-        mkdCodeStart = { fg = groups.headings.h1, style = 'bold' },
-        mkdCodeEnd = { fg = groups.headings.h1, style = 'bold' },
+        mkdCodeStart = { fg = h1, style = 'bold' },
+        mkdCodeEnd = { fg = h1, style = 'bold' },
         mkdLink = { fg = groups.hint, style = 'underline' },
 
         markdownHeadingDelimiter = { fg = groups.nontext, style = 'bold' },
         markdownCode = { fg = groups.comment },
-        markdownCodeBlock = { fg = groups.headings.h1 },
-        markdownH1 = { fg = groups.headings.h1, style = 'bold' },
-        markdownH2 = { fg = groups.headings.h2, style = 'bold' },
-        markdownH3 = { fg = groups.headings.h3, style = 'bold' },
-        markdownH4 = { fg = groups.headings.h4, style = 'bold' },
+        markdownCodeBlock = { fg = h1 },
+        markdownH1 = { fg = h1, style = 'bold' },
+        markdownH2 = { fg = h2, style = 'bold' },
+        markdownH3 = { fg = h3, style = 'bold' },
+        markdownH4 = { fg = h4, style = 'bold' },
         markdownLinkText = { fg = groups.hint, style = 'underline' },
 
         debugPC = { bg = groups.panel_float }, -- used for highlighting the current line in terminal-debug
@@ -183,7 +189,7 @@ function M.get(config)
 
         -- Treesitter
         -- TSAttribute = {},
-        -- TSKeywordReturn = { fg = groups.headings.h1 },
+        -- TSKeywordReturn = { fg = h1 },
         ['@boolean'] = { fg = groups.const2 },
         -- TSCharacter = { link = 'Character' },
         ['@comment'] = { fg = groups.comment },
@@ -191,7 +197,7 @@ function M.get(config)
         ['@constant.builtin'] = { fg = groups.const },
         -- TSConstMacro = {},
         -- TSConstant = { fg = groups.text },
-        ['@constructor'] = { fg = groups.headings.h5 },
+        ['@constructor'] = { fg = h5 },
         -- TSEmphasis = {},
         TSError = { fg = groups.error },
         -- TSException = {},
@@ -210,14 +216,14 @@ function M.get(config)
         ['@keyword.operator'] = { fg = groups.link },
         ['@label'] = { fg = groups.link },
         -- TSLiteral = {},
-        ['@method'] = { fg = groups.headings.h5 },
+        ['@method'] = { fg = h5 },
         -- TSNamespace = {},
         -- TSNone = {},
         TSNumber = { fg = groups.const2 },
         ['@operator'] = { fg = groups.link },
         ['@parameter'] = { fg = groups.text },
         -- TSParameterReference = {},
-        ['@property'] = { fg = groups.headings.h6 },
+        ['@property'] = { fg = h6 },
         ['@punctuation.delimiter'] = { fg = groups.punctuation },
         ['@punctuation.special'] = { fg = groups.punctuation },
         ['@punctuation.bracket'] = { fg = groups.text },
@@ -226,13 +232,13 @@ function M.get(config)
         ['@string'] = { fg = groups.str },
         ['@string.escape'] = { fg = groups.error },
         -- TSStringRegex = {},
-        -- TSStringSpecial = { fg = groups.headings.h5 },
+        -- TSStringSpecial = { fg = h5 },
         -- TSSymbol = {},
         ['@tag'] = { fg = groups.text },
         ['@tag.delimiter'] = { fg = groups.text },
         ['@tag.attribute'] = { fg = groups.link, style = "italic" },
         ['@text'] = { fg = groups.text },
-        ['@title'] = { fg = groups.headings.h1, style = 'bold' },
+        ['@title'] = { fg = h1, style = 'bold' },
         ['@type'] = { fg = groups.vartype },
         ['@type.builtin'] = { fg = groups.vartype },
         TSURI = { fg = groups.link },
@@ -242,13 +248,13 @@ function M.get(config)
         ['@variable.builtin'] = { fg = groups.varname },
 
         -- tsx/jsx
-        typescriptVariable = { fg = groups.headings.h6 },
-        typescriptExport = { fg = groups.headings.h5 },
-        typescriptDefault = { fg = groups.headings.h5 },
-        typescriptConstraint = { fg = groups.headings.h5 },
+        typescriptVariable = { fg = h6 },
+        typescriptExport = { fg = h5 },
+        typescriptDefault = { fg = h5 },
+        typescriptConstraint = { fg = h5 },
         typescriptBlock = { fg = groups.text },
         typescriptIdentifierName = { fg = groups.text_bright },
-        typescriptTSInclude = { fg = groups.headings.h5 },
+        typescriptTSInclude = { fg = h5 },
         typescriptCastKeyword = { fg = groups.text_bright },
         typescriptEnum = { fg = groups.nontext },
         typescriptTypeCast = { fg = groups.text_bright },
@@ -260,18 +266,18 @@ function M.get(config)
 
         -- css
         cssTSFunction = { fg = groups.comment },
-        cssTSProperty = { fg = groups.headings.h6 },
-        cssTSType = { fg = groups.headings.h5 },
+        cssTSProperty = { fg = h6 },
+        cssTSType = { fg = h5 },
         cssTSKeyword = { fg = groups.comment },
-        cssClassName = { fg = groups.headings.h1, style = "italic" },
+        cssClassName = { fg = h1, style = "italic" },
         cssPseudoClass = { fg = groups.link, style = "italic" },
-        cssDefinition = { fg = groups.headings.h6 },
+        cssDefinition = { fg = h6 },
         cssTSError = { link = 'cssClassName' },
 
         -- vim.lsp.buf.document_highlight()
-        LspReferenceText = { bg = groups.headings.h6 },
-        LspReferenceRead = { bg = groups.headings.h6 },
-        LspReferenceWrite = { bg = groups.headings.h6 },
+        LspReferenceText = { bg = h6 },
+        LspReferenceRead = { bg = h6 },
+        LspReferenceWrite = { bg = h6 },
 
         -- lsp-highlight-codelens
         LspCodeLens = { fg = groups.comment }, -- virtual text of code lens
@@ -307,14 +313,14 @@ function M.get(config)
         CmpItemAbbr = { fg = groups.text_bright },
         CmpItemAbbrDeprecated = { fg = groups.error, style = 'strikethrough' },
         CmpItemAbbrMatch = { fg = groups.text, style = 'bold' },
-        CmpItemAbbrMatchFuzzy = { fg = groups.headings.h5, style = 'bold' },
+        CmpItemAbbrMatchFuzzy = { fg = h5, style = 'bold' },
         CmpItemKind = { fg = groups.link },
         CmpItemKindClass = { fg = groups.warn },
         CmpItemKindFunction = { fg = groups.hint },
-        CmpItemKindInterface = { fg = groups.headings.h6 },
+        CmpItemKindInterface = { fg = h6 },
         CmpItemKindMethod = { fg = groups.error },
         CmpItemKindSnippet = { fg = groups.comment },
-        CmpItemKindVariable = { fg = groups.headings.h5 },
+        CmpItemKindVariable = { fg = h5 },
 
         -- ray-x/lsp_signature.nvim
         LspSignatureActiveParameter = { bg = groups.comment },
@@ -326,24 +332,24 @@ function M.get(config)
         TelescopePromptNormal = { fg = groups.text },
         TelescopePromptPrefix = { fg = groups.comment },
         TelescopeSelection = { fg = groups.text, bg = groups.comment },
-        TelescopeSelectionCaret = { fg = groups.headings.h4, bg = groups.comment },
-        TelescopeTitle = { fg = groups.headings.h1 },
+        TelescopeSelectionCaret = { fg = h4, bg = groups.comment },
+        TelescopeTitle = { fg = h1 },
     }
 
     vim.g.terminal_color_0 = groups.background -- black
     vim.g.terminal_color_8 = groups.background -- bright black
     vim.g.terminal_color_1 = groups.error -- red
     vim.g.terminal_color_9 = groups.error -- bright red
-    vim.g.terminal_color_2 = groups.headings.h5 -- green
-    vim.g.terminal_color_10 = groups.headings.h5 -- bright green
+    vim.g.terminal_color_2 = h5 -- green
+    vim.g.terminal_color_10 = h5 -- bright green
     vim.g.terminal_color_3 = groups.warn -- lightYellow1
     vim.g.terminal_color_11 = groups.warn -- bright lightYellow1
     vim.g.terminal_color_4 = groups.hint -- blue
-    vim.g.terminal_color_12 = groups.headings.h6 -- bright blue
-    vim.g.terminal_color_5 = groups.headings.h4 -- magenta
-    vim.g.terminal_color_13 = groups.headings.h4 -- bright magenta
+    vim.g.terminal_color_12 = h6 -- bright blue
+    vim.g.terminal_color_5 = h4 -- magenta
+    vim.g.terminal_color_13 = h4 -- bright magenta
     vim.g.terminal_color_6 = groups.hint -- brightCyan1
-    vim.g.terminal_color_14 = groups.headings.h6 -- bright brightCyan1
+    vim.g.terminal_color_14 = h6 -- bright brightCyan1
     vim.g.terminal_color_7 = groups.glowing -- white
     vim.g.terminal_color_15 = groups.glowing -- bright white
 
