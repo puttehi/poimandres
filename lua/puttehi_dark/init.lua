@@ -23,7 +23,18 @@ local config = {
         text = 'text',
         text_bright = "lightSilver1",
         glowing = 'white',
-        nontext = "darkBlue1",
+        nontext = 'darkBlue1',
+
+        -- coding stuff
+        const = 'lightSilver1',
+        const2 = 'white',
+        str = 'lightBlue1',
+        str2 = 'brightCyan1',
+        varname = 'text',
+        vartype = 'brightRed1',
+        func = 'brightRed1',
+        operator = 'darkCyan1',
+        ifelse = 'brightRed1',
 
         error = 'lightRed1',
         hint = 'brightCyan1',

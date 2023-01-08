@@ -81,31 +81,31 @@ function M.get(config)
         -- default,
         -- Uncomment and edit if you want more specific syntax highlighting.
 
-        Constant = { fg = groups.text }, -- (preferred) any constant
-        String = { fg = groups.headings.h3 }, --   a string constant: "this is a string"
-        Character = { fg = groups.error }, --  a character constant: 'c', '\n'
-        Number = { fg = groups.headings.h5 }, --   a number constant: 234, 0xff
-        Boolean = { fg = groups.headings.h6 }, --  a boolean constant: TRUE, false
-        Float = { fg = groups.headings.h5 }, --    a floating point constant: 2.3e10
+        Constant = { fg = groups.const }, -- (preferred) any constant
+        String = { fg = groups.str }, --   a string constant: "this is a string"
+        Character = { fg = groups.str2 }, --  a character constant: 'c', '\n'
+        Number = { fg = groups.const2 }, --   a number constant: 234, 0xff
+        Boolean = { fg = groups.const2 }, --  a boolean constant: TRUE, false
+        Float = { fg = groups.const2 }, --    a floating point constant: 2.3e10
 
-        Identifier = { fg = groups.text }, -- (preferred) any variable name
-        Function = { fg = groups.headings.h5 }, -- function name (also: methods for classes)
+        Identifier = { fg = groups.varname }, -- (preferred) any variable name
+        Function = { fg = groups.func }, -- function name (also: methods for classes)
 
-        Statement = { fg = groups.text }, -- (preferred) any statement
-        Conditional = { fg = groups.headings.h1 }, --  if, then, else, endif, switch, etc.
-        Repeat = { fg = groups.headings.h1 }, --   for, do, while, etc.
-        Label = { fg = groups.headings.h1 }, --    case, default, etc.
+        Statement = { fg = groups.statement }, -- (preferred) any statement
+        Conditional = { fg = groups.ifelse }, --  if, then, else, endif, switch, etc.
+        Repeat = { fg = groups.ifelse }, --   for, do, while, etc.
+        Label = { fg = groups.func }, --    case, default, etc.
         Operator = { fg = groups.link }, -- "sizeof", "+", "*", etc.
-        Keyword = { fg = groups.headings.h1 }, --  any other keyword
-        Exception = { fg = groups.headings.h1 }, --  try, catch, throw
+        Keyword = { fg = groups.func }, --  any other keyword
+        Exception = { fg = groups.func }, --  try, catch, throw
 
-        PreProc = { fg = groups.text }, -- (preferred) generic Preprocessor
-        Include = { fg = groups.headings.h1 }, --  preprocessor #include
+        PreProc = { fg = groups.const }, -- (preferred) generic Preprocessor
+        Include = { fg = groups.const }, --  preprocessor #include
         -- Define        = { }, --   preprocessor #define
         -- Macro         = { }, --    same as Define
         -- PreCondit     = { }, --  preprocessor #if, #else, #endif, etc.
 
-        Type = { fg = groups.headings.h6 }, -- (preferred) int, long, char, etc.
+        Type = { fg = groups.vartype }, -- (preferred) int, long, char, etc.
         --[[ Structure = { fg = groups.comment }, --  struct, union, enum, etc. ]]
         -- StorageClass  = { }, -- static, register, volatile, etc.
         -- Typedef = { fg = groups.comment }, --  A typedef
@@ -113,7 +113,7 @@ function M.get(config)
         Special = { fg = groups.text_bright }, -- (preferred) any special symbol
         -- SpecialChar   = { }, --  special character in a constant
         Tag = { fg = p.text }, --    you can use CTRL-] on this
-        Delimiter = { fg = groups.comment }, --  character that needs attention
+        Delimiter = { fg = groups.warn }, --  character that needs attention
         SpecialComment = { fg = groups.comment }, -- special things inside a comment
         -- Debug         = { }, --    debugging statements
 
