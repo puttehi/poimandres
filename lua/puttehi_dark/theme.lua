@@ -5,10 +5,9 @@ local M = {}
 function M.get(config)
     local p = require 'puttehi_dark.palette'
 
-    local theme = {}
     local groups = config.groups or {}
 
-    theme = {
+    local theme = {
         ColorColumn = { bg = groups.comment },
         Conceal = { bg = p.none },
         CurSearch = { link = 'IncSearch' },
@@ -183,7 +182,6 @@ function M.get(config)
         DiagnosticVirtualTextWarn = { fg = groups.warn },
 
         -- Treesitter
-        ['@variable'] = { fg = groups.varname },
         -- TSAttribute = {},
         -- TSKeywordReturn = { fg = groups.headings.h1 },
         ['@boolean'] = { fg = groups.const2 },
