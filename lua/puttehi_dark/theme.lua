@@ -69,7 +69,7 @@ function M.get(config)
         TabLineSel = { fg = groups.text, bg = groups.panel_float },
         Title = { fg = groups.text },
         VertSplit = { fg = groups.border, bg = groups.border },
-        Visual = { fg = groups.text, bg = groups.comment },
+        Visual = { fg = groups.text, bg = groups.background_float },
         -- VisualNOS = {},
         WarningMsg = { fg = groups.warning },
         Whitespace = { fg = groups.comment },
