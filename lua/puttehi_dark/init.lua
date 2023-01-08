@@ -84,9 +84,9 @@ function M.setup(opts)
 end
 
 function M.colorscheme()
-    if vim.g.colors_name then
-        vim.cmd 'hi clear'
-    end
+    --if vim.g.colors_name then
+    --    vim.cmd 'hi clear'
+    --end
 
     vim.opt.termguicolors = true
     vim.g.colors_name = 'puttehi_dark'
