@@ -205,6 +205,7 @@ function M.get(config)
         ['@function.call'] = { fg = groups.text },
         ['@function.name'] = { fg = groups.vartype },
         TSInclude = { fg = groups.vartype },
+        ['@include'] = { fg = groups.vartype },
         ['@keyword'] = { fg = groups.func },
         ['@keyword.return'] = { fg = groups.vartype },
         ['@keyword.function'] = { fg = groups.vartype },
@@ -238,6 +239,7 @@ function M.get(config)
         ['@type.builtin'] = { fg = groups.vartype },
         TSURI = { fg = groups.link },
         -- TSUnderline = {},
+        ['@variable'] = { fg = groups.text },
         ['@variable.function'] = { fg = groups.func },
         ['@variable.builtin'] = { fg = groups.varname },
 
