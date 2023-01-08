@@ -82,7 +82,7 @@ function M.get(config)
         -- Uncomment and edit if you want more specific syntax highlighting.
 
         Constant = { fg = groups.text }, -- (preferred) any constant
-        String = { fg = groups.headings.h5 }, --   a string constant: "this is a string"
+        String = { fg = groups.headings.h3 }, --   a string constant: "this is a string"
         Character = { fg = groups.error }, --  a character constant: 'c', '\n'
         Number = { fg = groups.headings.h5 }, --   a number constant: 234, 0xff
         Boolean = { fg = groups.headings.h6 }, --  a boolean constant: TRUE, false
@@ -183,7 +183,7 @@ function M.get(config)
         DiagnosticVirtualTextWarn = { fg = groups.warn },
 
         -- Treesitter
-        ['@variable'] = { fg = p.text },
+        ['@variable'] = { fg = groups.text },
         -- TSAttribute = {},
         -- TSKeywordReturn = { fg = groups.headings.h1 },
         ['@boolean'] = { link = 'Boolean' },
@@ -203,7 +203,7 @@ function M.get(config)
         ['@function.builtin'] = { fg = groups.headings.h6 },
         -- TSFuncMacro = {},
         ['@function'] = { link = 'Function' },
-        ['@function.call'] = { fg = p.text },
+        ['@function.call'] = { fg = groups.text },
         TSInclude = { fg = groups.headings.h6 },
         ['@keyword'] = { link = 'Keyword' },
         ['@keyword.return'] = { fg = groups.headings.h1 },
