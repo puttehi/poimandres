@@ -190,7 +190,6 @@ function M.get(config)
         -- TSCharacter = { link = 'Character' },
         ['@comment'] = { fg = groups.comment },
         -- TSConditional = { link = 'Conditional' },
-        ['@variable.builtin'] = { fg = groups.varname },
         ['@constant.builtin'] = { fg = groups.const },
         -- TSConstMacro = {},
         -- TSConstant = { fg = groups.text },
@@ -208,7 +207,7 @@ function M.get(config)
         TSInclude = { fg = groups.vartype },
         ['@keyword'] = { fg = groups.func },
         ['@keyword.return'] = { fg = groups.vartype },
-        ['@keyword.function'] = { fg = groups.func },
+        ['@keyword.function'] = { fg = groups.vartype },
         ['@keyword.operator'] = { fg = groups.link },
         ['@label'] = { fg = groups.link },
         -- TSLiteral = {},
@@ -239,6 +238,8 @@ function M.get(config)
         ['@type.builtin'] = { fg = groups.vartype },
         TSURI = { fg = groups.link },
         -- TSUnderline = {},
+        ['@variable.function'] = { fg = groups.func },
+        ['@variable.builtin'] = { fg = groups.varname },
 
         -- tsx/jsx
         typescriptVariable = { fg = groups.headings.h6 },
