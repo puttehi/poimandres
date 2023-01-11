@@ -40,8 +40,6 @@ local function parse_color(color)
     return print_to_vim({'invalid color', color_type, color})
   end
 
-  color = color:lower()
-
   if not color:find '#' and color ~= 'none' then
     color = require('puttehi_dark.palette')[color] or vim.api.nvim_get_color_by_name(color)
   end
