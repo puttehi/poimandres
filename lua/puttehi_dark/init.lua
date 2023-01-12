@@ -31,10 +31,11 @@ local config = {
         str = 'lightBlue1',
         str2 = 'brightCyan1',
         varname = 'brightRed1',
-        vartype = 'brightRed1',
+        vartype = 'darkYellow1',
         func = 'lightBlue1',
         operator = 'darkCyan1',
         ifelse = 'brightRed1',
+        keyword = 'brightRed1',
 
         error = 'lightRed1',
         hint = 'brightCyan1',
