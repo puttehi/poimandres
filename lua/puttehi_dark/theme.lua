@@ -286,13 +286,13 @@ function M.get(config)
         LspCodeLensSeparator = { fg = groups.comment }, -- separator between two or more code lens
 
         -- nvim-ts-rainbow
-        rainbowcol1 = { fg = groups.const },
-        rainbowcol2 = { fg = groups.keyword },
-        rainbowcol3 = { fg = groups.const2 },
-        rainbowcol4 = { fg = groups.str },
-        rainbowcol5 = { fg = groups.info },
-        rainbowcol6 = { fg = groups.operator },
-        rainbowcol7 = { fg = groups.str2 },
+        rainbowcol1 = { fg = groups.keyword },
+        rainbowcol2 = { fg = groups.const2 },
+        rainbowcol3 = { fg = groups.str },
+        rainbowcol4 = { fg = groups.info },
+        rainbowcol5 = { fg = groups.operator },
+        rainbowcol6 = { fg = groups.str2 },
+        rainbowcol7 = { fg = groups.nontext },
 
         -- lewis6991/gitsigns.nvim
         GitSignsAdd = { fg = groups.git_add },
