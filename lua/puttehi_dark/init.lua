@@ -14,6 +14,7 @@ local config = {
     groups = {
         background = 'background2',
         background_float = 'background4',
+        background_bright = 'background5',
         panel = 'background1',
         panel_float = 'background3',
         border = 'lightTeal1',
