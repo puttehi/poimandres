@@ -209,10 +209,10 @@ function M.get(config)
         ['@function.call'] = { fg = groups.text },
         ['@function.name'] = { fg = groups.vartype },
         ['@function.builtin'] = { fg = groups.vartype },
-        ['@include'] = { fg = groups.func }, -- import, include etc.
+        ['@include'] = { fg = groups.keyword }, -- import, include etc.
         ['@keyword'] = { fg = groups.keyword },
-        ['@keyword.function'] = { fg = groups.func }, -- func, def etc.
-        ['@keyword.operator'] = { fg = groups.func }, -- in, of etc.
+        ['@keyword.function'] = { fg = groups.keyword }, -- func, def etc.
+        ['@keyword.operator'] = { fg = groups.keyword }, -- in, of etc.
         ['@label'] = { fg = groups.link },
         -- TSLiteral = {},
         ['@method'] = { fg = groups.text_bright },
