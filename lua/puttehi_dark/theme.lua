@@ -229,8 +229,8 @@ function M.get(config)
         ['@punctuation.bracket'] = { fg = groups.text },
         -- TSRepeat = {},
         -- TSStrike = {},
-        ['@string'] = { fg = groups.str },
-        ['@string.escape'] = { fg = groups.error },
+        ['@string'] = { fg = groups.str }, -- abc = "abba", call("somestr") etc.
+        ['@string.escape'] = { fg = groups.text }, -- \n, \t etc.
         -- TSStringRegex = {},
         -- TSStringSpecial = { fg = h5 },
         -- TSSymbol = {},
@@ -247,7 +247,7 @@ function M.get(config)
         ['@variable.function'] = { fg = groups.func },
         ['@variable.builtin'] = { fg = groups.varname },
         ['@field'] = { fg = groups.text },
-        ['@number'] = { fg = groups.const2 },
+        ['@number'] = { fg = groups.str }, -- a = 1, call(number=1) etc.
 
         -- tsx/jsx
         typescriptVariable = { fg = h6 },
