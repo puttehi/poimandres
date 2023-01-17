@@ -44,8 +44,11 @@ function M.get(config)
         ModeMsg = { fg = groups.info },
         MoreMsg = { fg = groups.info },
         NonText = { fg = groups.nontext },
+        -- custom for inactive window dimming
+        WindowActive = { fg = groups.text, bg = groups.background },
         Normal = { fg = groups.text, bg = groups.background },
         NormalFloat = { fg = groups.text, bg = groups.background_float },
+        WindowInactive = { fg = groups.text, bg = p.none },
         NormalNC = { fg = groups.text, bg = groups.background },
         NvimInternalError = { groups.glowing, bg = groups.error },
         Pmenu = { fg = groups.comment, bg = groups.background_float },
@@ -336,10 +339,6 @@ function M.get(config)
         TelescopeSelection = { fg = groups.text, bg = groups.comment },
         TelescopeSelectionCaret = { fg = h4, bg = groups.comment },
         TelescopeTitle = { fg = h1 },
-
-        -- puttehi-dark custom for autocmd
-        WindowActive = { link = "Normal" },
-        WindowInactive = { bg = p.none }
     }
 
     vim.g.terminal_color_0 = groups.background -- black
