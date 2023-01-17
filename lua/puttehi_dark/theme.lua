@@ -48,8 +48,8 @@ function M.get(config)
         WindowActive = { fg = groups.text, bg = groups.background },
         Normal = { fg = groups.text, bg = groups.background },
         NormalFloat = { fg = groups.text, bg = groups.background_float },
-        WindowInactive = { fg = groups.text, bg = p.none },
-        NormalNC = { fg = groups.text, bg = groups.background },
+        WindowInactive = { fg = groups.text, bg = p.background1 }, -- none doesn't work for transparent for some reason
+        NormalNC = { link = "WindowInactive" },
         NvimInternalError = { groups.glowing, bg = groups.error },
         Pmenu = { fg = groups.comment, bg = groups.background_float },
         PmenuSbar = { bg = groups.text_bright },
