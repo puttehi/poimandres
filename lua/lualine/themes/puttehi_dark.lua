@@ -86,12 +86,12 @@ local puttehi_dark = {
     },
     inactive = {
         a = {
-            fg = Colors.gray2,
+            fg = Colors.brightorange,
             bg = Colors.gray5,
             gui = 'bold'
         },
         b = {
-            fg = Colors.brightorange,
+            fg = Colors.gray2,
             bg = Colors.gray5,
             gui = 'bold'
         },
