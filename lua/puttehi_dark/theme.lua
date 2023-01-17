@@ -336,6 +336,10 @@ function M.get(config)
         TelescopeSelection = { fg = groups.text, bg = groups.comment },
         TelescopeSelectionCaret = { fg = h4, bg = groups.comment },
         TelescopeTitle = { fg = h1 },
+
+        -- puttehi-dark custom for autocmd
+        WindowActive = { link = "Normal" },
+        WindowInactive = { bg = p.none }
     }
 
     vim.g.terminal_color_0 = groups.background -- black
